@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cayenne_lpp_parser
+namespace Main
 {
     class Program
     {
