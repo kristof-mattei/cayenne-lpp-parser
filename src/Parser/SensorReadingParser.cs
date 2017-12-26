@@ -16,8 +16,7 @@
 
             for (var i = 0; i < bytes.Length;)
             {
-                int toSkip = 0;
-                byte[] array = null;
+                int toSkip;
                 switch (bytes[i + 1])
                 {
                     case 0x00:
