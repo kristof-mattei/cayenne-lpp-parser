@@ -12,13 +12,16 @@
         private readonly byte _type;
 
         [FieldOffset(2)]
-        private readonly ushort _rawhPa;
+        private readonly byte _rawhPa;
+
+        [FieldOffset(3)]
+        private readonly byte _rawhPa2;
 
         private const decimal Resolution = 0.1m;
 
         public byte Channel => this._channel;
 
         public byte Type => this._type;
-        public decimal HPa => this._rawhPa * Resolution;
+        public decimal HPa => ((this._rawhPa << 8) | this._rawhPa2) * Resolution;
     }
 }

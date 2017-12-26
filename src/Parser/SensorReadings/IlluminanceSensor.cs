@@ -12,11 +12,14 @@
         private readonly byte _type;
 
         [FieldOffset(2)]
-        private readonly ushort _rawLux;
+        private readonly byte _rawLux;
+
+        [FieldOffset(3)]
+        private readonly byte _rawLux2;
 
         public byte Channel => this._channel;
 
         public byte Type => this._type;
-        public ushort RawLux => this._rawLux;
+        public ushort RawLux => (ushort) ((this._rawLux << 8) | this._rawLux2);
     }
 }

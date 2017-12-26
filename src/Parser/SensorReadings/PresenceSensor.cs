@@ -17,6 +17,6 @@
         public byte Channel => this._channel;
 
         public byte Type => this._type;
-        public bool Present => this._present == 0x01;
+        public bool Present => this._present != 0x00;
     }
 }
